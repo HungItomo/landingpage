@@ -1,0 +1,26 @@
+.carousel-item {
+    flex: 0 0 100%; /* Mỗi item chiếm 100% chiều rộng của container */
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Thêm hiệu ứng cho các nút điều hướng (tùy chọn) */
+.nav-button {
+    transition: opacity 0.3s ease;
+}
+
+/* Nếu bạn muốn hiển thị nhiều hơn 1 item, thay đổi flex-basis */
+@media (min-width: 768px) {
+    .carousel-item-md {
+        flex: 0 0 calc(50% - 2rem); /* 2 items/slide, trừ đi margin/gap */
+    }
+}
+@media (min-width: 1024px) {
+    .carousel-item-lg {
+        flex: 0 0 calc(33.333% - 1.333rem); /* 3 items/slide */
+    }
+}
+
+/* Kiểu dáng cho phần nền (tùy chọn, mô phỏng hình ảnh của bạn) */
+.testimonial-bg {
+    background-color: #fcfbf8; /* Màu nền nhạt */
+}

@@ -40,18 +40,41 @@
     </head>
     <body class="bg-gray-50 text-gray-800">
         <!-- HEADER -->
-        <header class="bg-[#7B542F] shadow-md fixed w-full top-0 left-0 z-50">
+        <header class="bg-[#7B542F] shadow-md w-full z-50">
             <div
                 class="max-w-full md:max-w-4xl lg:max-w-5xl mx-auto px-4 md:px-6 py-2 flex flex-wrap md:flex-nowrap justify-between items-center"
             >
-                <img
-                    src="image/Logo.svg"
-                    alt="MyBrand Logo"
-                    class="h-12 md:h-16 w-auto flex-shrink-0"
-                />
+                <a href="/index.html" class="inline-block cursor-pointer">
+                    <img
+                        src="../image/Logo.svg"
+                        alt="MyBrand Logo"
+                        class="h-16 md:h-16 w-auto flex-shrink-0"
+                    />
+                </a>
+
+                <button
+                    id="mobile-menu-button"
+                    class="md:hidden text-white p-2"
+                >
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-6 w-6"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                        stroke-width="2"
+                    >
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M4 6h16M4 12h16M4 18h16"
+                        />
+                    </svg>
+                </button>
 
                 <div
-                    class="w-full md:w-auto mt-2 md:mt-0 flex flex-col gap-2 justify-end items-end"
+                    id="navigation-content"
+                    class="hidden md:flex w-full md:w-auto mt-2 md:mt-0 flex-col gap-2 justify-end items-end"
                 >
                     <div
                         class="flex w-full md:w-auto gap-4 items-center justify-end"
@@ -95,31 +118,74 @@
                         </div>
                     </div>
                     <nav
-                        class="flex gap-4 md:gap-8 lg:gap-24 text-white w-full md:w-auto justify-end"
+                        class="flex flex-col md:flex-row gap-2 md:gap-8 lg:gap-20 text-white w-full md:w-auto justify-end items-start md:items-center py-2"
                     >
                         <a
-                            href="#"
-                            class="hover:text-[#FFD700] text-xs md:text-sm"
+                            href="./gioi-thieu.html"
+                            class="hover:text-[#FFD700] text-sm md:text-sm"
                             >Giới thiệu</a
                         >
+
+                        <div class="relative group">
+                            <a
+                                href="#"
+                                class="hover:text-[#FFD700] text-sm md:text-sm flex items-center gap-1"
+                            >
+                                Sản phẩm
+                            </a>
+
+                            <!-- Menu dropdown -->
+                            <div
+                                class="absolute opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:translate-y-2 bg-white text-black shadow-lg rounded-sm py-2 px-4 top-full left-0 min-w-[12rem] md:min-w-max border border-gray-200 z-[100] transition-all duration-300 ease-out"
+                            >
+                                <a
+                                    href="/products/thep-can-nguoi.html"
+                                    class="block px-4 py-2 text-sm hover:bg-gray-100 hover:text-[#7B542F] whitespace-nowrap"
+                                    >Thép cán nguội</a
+                                >
+                                <a
+                                    href="/products/thep-can-nong.html"
+                                    class="block px-4 py-2 text-sm hover:bg-gray-100 hover:text-[#7B542F] whitespace-nowrap"
+                                    >Thép cán nóng</a
+                                >
+                                <a
+                                    href="/products/thep-ma-kem.html"
+                                    class="block px-4 py-2 text-sm hover:bg-gray-100 hover:text-[#7B542F] whitespace-nowrap"
+                                    >Thép mạ kẽm</a
+                                ><a
+                                    href="/products/thep-khong-ri.html"
+                                    class="block px-4 py-2 text-sm hover:bg-gray-100 hover:text-[#7B542F] whitespace-nowrap"
+                                    >Thép không rỉ (inox)</a
+                                ><a
+                                    href="/products/thep-hinh-ong-hop.html"
+                                    class="block px-4 py-2 text-sm hover:bg-gray-100 hover:text-[#7B542F] whitespace-nowrap"
+                                    >Thép hình ,Thép ống, thép hộp</a
+                                ><a
+                                    href="/products/thep-xay-dung.html"
+                                    class="block px-4 py-2 text-sm hover:bg-gray-100 hover:text-[#7B542F] whitespace-nowrap"
+                                    >Thép xây dựng
+                                </a>
+                            </div>
+                        </div>
                         <a
-                            href="#"
-                            class="hover:text-[#FFD700] text-xs md:text-sm"
-                            >Sản phẩm</a
+                            href="./dich-vu.html"
+                            class="hover:text-[#FFD700] text-sm md:text-sm"
+                            >Dịch vụ</a
                         >
                         <a
                             href="#"
-                            class="hover:text-[#FFD700] text-xs md:text-sm"
+                            class="hover:text-[#FFD700] text-sm md:text-sm"
                             >Chất lượng</a
                         >
                         <a
                             href="#"
-                            class="hover:text-[#FFD700] text-xs md:text-sm"
+                            class="hover:text-[#FFD700] text-sm md:text-sm"
                             >Tin tức</a
                         >
                         <a
                             href="#"
-                            class="hover:text-[#FFD700] text-xs md:text-sm"
+                            id="contact-link"
+                            class="hover:text-[#FFD700] text-sm md:text-sm"
                             >Liên hệ</a
                         >
                     </nav>
@@ -128,7 +194,7 @@
         </header>
 
         <!-- BODY -->
-        <main class="pt-[70px]">
+        <main>
             <!-- SECTION1 -->
             <section
                 class="relative w-full h-[300px] md:h-[400px] lg:h-[600px] overflow-hidden"
@@ -154,7 +220,7 @@
                         class="w-1/3 h-full flex-shrink-0 relative"
                     >
                         <img
-                            src="image/Artboard 6.png"
+                            src="image/Anh9.jpg"
                             alt="Background Carousel 2"
                             class="w-full h-full object-cover"
                         />
@@ -165,7 +231,7 @@
                         class="w-1/3 h-full flex-shrink-0 relative"
                     >
                         <img
-                            src="image/Artboard 5.png"
+                            src="image/Anh7.jpg"
                             alt="Background Carousel 3"
                             class="w-full h-full object-cover"
                         />
@@ -237,19 +303,19 @@
                         class="relative w-72 h-72 sm:w-80 sm:h-80 lg:w-[30rem] lg:h-[30rem] overflow-hidden rounded-[16px] flex-shrink-0"
                     >
                         <img
-                            src="image/Artboard 5.png"
+                            src="image/Anh1.jpg"
                             alt="Square Background"
                             class="absolute inset-0 w-full h-full object-cover"
                         />
-                        <div class="absolute inset-0 bg-black opacity-70"></div>
+                        <div class="absolute inset-0 bg-black opacity-60"></div>
                     </div>
                     <div
                         class="absolute z-10 flex items-center justify-center w-full h-full"
                     >
                         <img
-                            src="image/Logo.svg"
+                            src="image/LogoDoc.svg"
                             alt="Overlay Logo"
-                            class="w-48 h-48 sm:w-60 sm:h-60 object-contain rounded-lg shadow-lg"
+                            class="w-96 h-96 sm:w-96 sm:h-96 object-contain rounded-lg shadow-lg"
                         />
                     </div>
                 </div>
@@ -268,23 +334,19 @@
                             QUỐC.
                         </p>
                         <p class="text-sm text-gray-700">
-                            Trường An là doanh nghiệp hoạt động chuyên sâu trong
-                            lĩnh vực buôn bán - gia công sắt thép xây dựng, kinh
-                            doanh kho bãi, nhà xưởng và bất động sản.
+                            Trường An là đơn vị chuyên cung cấp dịch vụ gia công
+                            thép tấm chất lượng cao phục vụ các nhà máy, xưởng
+                            cơ khí, xây dựng, và sản xuất công nghiệp.
                         </p>
                         <p class="text-sm text-gray-700">
-                            Chúng tôi cung cấp vật liệu thép chất lượng cao, từ
-                            cán nóng, cán nguội, mạ kẽm cho đến thép hình, thép
-                            xây dựng tiêu chuẩn, phục vụ hàng ngàn công trình
-                            lớn nhỏ trên toàn quốc. Đồng thời, chúng tôi cung
-                            cấp dịch vụ cho thuê nhà xưởng, kho bãi và quỹ đất
-                            tiềm năng giúp doanh nghiệp mở rộng sản xuất nhanh
-                            chóng và an toàn.
+                            Với hệ thống máy móc hiện đại và quy trình gia công
+                            chính xác, chúng tôi đảm bảo sản phẩm đạt tiêu chuẩn
+                            kỹ thuật, bề mặt đẹp và kích thước chính xác.
                         </p>
                     </div>
 
                     <a
-                        href="#about"
+                        href="./gioi-thieu.html"
                         class="inline-block px-6 py-3 bg-[#7B542F] text-white font-semibold rounded-lg shadow-md hover:bg-[#694425] transition-all duration-200 w-fit mt-6 lg:mt-0"
                     >
                         Tìm hiểu thêm về chúng tôi →
@@ -305,8 +367,8 @@
                             class="w-full aspect-square overflow-hidden rounded-[12px] mb-4"
                         >
                             <img
-                                src="image/Artboard 6.png"
-                                class="w-full h-full object-cover transition-transform duration-500 ease-in-out hover:scale-110"
+                                src="image/Anh2.jpg"
+                                class="w-full h-full object-cover transition-transform duration-500 ease-in-out scale-125 hover:scale-150"
                                 alt="Ảnh minh họa"
                             />
                         </div>
@@ -325,8 +387,8 @@
                             class="w-full aspect-square overflow-hidden rounded-[12px] mb-4"
                         >
                             <img
-                                src="image/Artboard 6.png"
-                                class="w-full h-full object-cover transition-transform duration-500 ease-in-out hover:scale-110"
+                                src="image/Anh3.jpg"
+                                class="w-full h-full object-cover transition-transform duration-500 ease-in-out scale-125 hover:scale-150"
                                 alt="Ảnh minh họa"
                             />
                         </div>
@@ -344,8 +406,8 @@
                             class="w-full aspect-square overflow-hidden rounded-[12px] mb-4"
                         >
                             <img
-                                src="image/Artboard 6.png"
-                                class="w-full h-full object-cover transition-transform duration-500 ease-in-out hover:scale-110"
+                                src="image/Anh9.jpg"
+                                class="w-full h-full object-cover transition-transform duration-500 ease-in-out scale-125 hover:scale-150"
                                 alt="Ảnh minh họa"
                             />
                         </div>
@@ -363,8 +425,8 @@
                             class="w-full aspect-square overflow-hidden rounded-[12px] mb-4"
                         >
                             <img
-                                src="image/Artboard 6.png"
-                                class="w-full h-full object-cover transition-transform duration-500 ease-in-out hover:scale-110"
+                                src="image/Anh4.jpg"
+                                class="w-full h-full object-cover transition-transform duration-500 ease-in-out scale-125 hover:scale-150"
                                 alt="Ảnh minh họa"
                             />
                         </div>
@@ -379,7 +441,7 @@
                     </div>
                 </div>
                 <a
-                    href="#about"
+                    href="./dich-vu.html"
                     class="inline-block px-6 py-3 bg-white text-[#7B542F] font-semibold rounded-lg shadow-md transition-all duration-200 w-fit mt-8 lg:mt-0 hover:text-[#694425] hover:shadow-lg"
                 >
                     Xem tất cả dịch vụ →
@@ -408,21 +470,7 @@
                         <div
                             class="bg-[#7B542F] text-white text-3xl w-fit px-4 py-2 rounded-md mt-4 flex items-center gap-2"
                         >
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                fill="none"
-                                viewBox="0 0 24 24"
-                                stroke-width="1.5"
-                                stroke="currentColor"
-                                class="w-8 h-8"
-                                aria-hidden="true"
-                            >
-                                <path
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.18.448l-1.406 1.835a1.8 1.8 0 0 1-2.28.32l-3.321-2.883a1.8 1.8 0 0 1-.32-2.28l1.835-1.406c.393-.278.558-.74.448-1.18l-1.106-4.423a1.8 1.8 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 6.75Z"
-                                />
-                            </svg>
+                            <img src="/image/Phone (1).svg" class="h-8 w-8" />
                             024.xxx.xxxxx
                         </div>
                     </div>
@@ -430,7 +478,7 @@
                         class="w-[500px] aspect-square hidden lg:block overflow-hidden"
                     >
                         <img
-                            src="image/Artboard 6.png"
+                            src="image/Anh7.jpg"
                             alt="Background Image"
                             class="w-full h-full object-cover object-center transition duration-500 ease-in-out hover:scale-110"
                         />
@@ -441,11 +489,8 @@
             <!-- SECTION5 -->
             <section class="bg-[#F9F6EE] py-12">
                 <div class="max-w-7xl mx-auto text-center">
-                    <p class="text-red-700 uppercase font-semibold mb-2">
-                        Lời chứng thực
-                    </p>
                     <h2 class="text-4xl font-bold text-gray-900 mb-10">
-                        Phản hồi từ khách hàng
+                        Khách hàng & Đối tác tiêu biểu
                     </h2>
 
                     <div class="relative w-full group px-4">
@@ -458,22 +503,37 @@
                                     class="w-full sm:w-1/2 lg:w-1/3 flex-shrink-0 px-3"
                                 >
                                     <div
-                                        class="bg-white rounded-lg shadow p-6 flex flex-col items-center"
+                                        class="bg-white rounded-lg shadow p-6 flex flex-col items-center h-full"
                                     >
                                         <img
-                                            src="https://i.pravatar.cc/150?img=12"
-                                            class="w-28 h-28 rounded-lg object-cover mb-4"
+                                            src="/image/logo//CK17.png"
+                                            class="w-[10rem] h-[10rem] p-4 object-contain mb-4"
+                                            alt="Logo CÔNG TY TNHH MTV CƠ KHÍ 17"
                                         />
-                                        <p
-                                            class="text-gray-700 mb-3 leading-relaxed text-sm text-center"
+                                        <div
+                                            class="font-bold text-gray-900 px-2 pt-2 min-h-[4rem] flex items-center justify-center"
                                         >
-                                            Dịch vụ khách hàng rất tuyệt vời! Từ
-                                            khâu tư vấn đến giao hàng đều rất
-                                            chuyên nghiệp.
-                                        </p>
-                                        <p class="font-bold text-gray-900">
-                                            Dương Báo Ngọc
-                                        </p>
+                                            CÔNG TY TNHH MTV CƠ KHÍ 17
+                                        </div>
+                                    </div>
+                                </div>
+                                <div
+                                    class="w-full sm:w-1/2 lg:w-1/3 flex-shrink-0 px-3"
+                                >
+                                    <div
+                                        class="bg-white rounded-lg shadow p-6 flex flex-col items-center h-full"
+                                    >
+                                        <img
+                                            src="/image//logo/CK83.png"
+                                            class="w-[10rem] h-[10rem] p-4 object-contain mb-4"
+                                            alt="Logo CÔNG TY TNHH MỘT THÀNH VIÊN CƠ KHÍ 83"
+                                        />
+                                        <div
+                                            class="font-bold text-gray-900 px-2 pt-2 min-h-[4rem] flex items-center justify-center"
+                                        >
+                                            CÔNG TY TNHH MỘT THÀNH VIÊN CƠ KHÍ
+                                            83
+                                        </div>
                                     </div>
                                 </div>
 
@@ -481,22 +541,18 @@
                                     class="w-full sm:w-1/2 lg:w-1/3 flex-shrink-0 px-3"
                                 >
                                     <div
-                                        class="bg-white rounded-lg shadow p-6 flex flex-col items-center"
+                                        class="bg-white rounded-lg shadow p-6 flex flex-col items-center h-full"
                                     >
                                         <img
-                                            src="https://i.pravatar.cc/150?img=45"
-                                            class="w-28 h-28 rounded-lg object-cover mb-4"
+                                            src="image/logo/M3.logo.jpg"
+                                            class="w-[10rem] h-[10rem] p-4 object-contain mb-4"
+                                            alt="Logo CÔNG TY TNHH MTV THÔNG TIN M3"
                                         />
-                                        <p
-                                            class="text-gray-700 mb-3 leading-relaxed text-sm text-center"
+                                        <div
+                                            class="font-bold text-gray-900 px-2 pt-2 min-h-[4rem] flex items-center justify-center"
                                         >
-                                            Sản phẩm giống mô tả, dùng rất tốt.
-                                            Tôi đánh giá cao sự chăm sóc khách
-                                            hàng chu đáo!
-                                        </p>
-                                        <p class="font-bold text-gray-900">
-                                            Dương Bảo Anh
-                                        </p>
+                                            CÔNG TY TNHH MTV THÔNG TIN M3
+                                        </div>
                                     </div>
                                 </div>
 
@@ -504,22 +560,19 @@
                                     class="w-full sm:w-1/2 lg:w-1/3 flex-shrink-0 px-3"
                                 >
                                     <div
-                                        class="bg-white rounded-lg shadow p-6 flex flex-col items-center"
+                                        class="bg-white rounded-lg shadow p-6 flex flex-col items-center h-full"
                                     >
                                         <img
-                                            src="https://i.pravatar.cc/150?img=32"
-                                            class="w-28 h-28 rounded-lg object-cover mb-4"
+                                            src="image/logo/Năng lượng xanh.png"
+                                            class="w-[10rem] h-[10rem] p-4 object-contain mb-4"
+                                            alt="Logo CÔNG TY TNHH ĐẦU TƯ VÀ PHÁT TRIỂN NĂNG LƯỢNG XANH"
                                         />
-                                        <p
-                                            class="text-gray-700 mb-3 leading-relaxed text-sm text-center"
+                                        <div
+                                            class="font-bold text-gray-900 px-2 pt-2 min-h-[4rem] flex items-center justify-center"
                                         >
-                                            Tôi đã mua hàng nhiều lần và luôn
-                                            hài lòng. Sẽ tiếp tục ủng hộ trong
-                                            tương lai!
-                                        </p>
-                                        <p class="font-bold text-gray-900">
-                                            Nguyễn Văn Trường
-                                        </p>
+                                            CÔNG TY TNHH ĐẦU TƯ VÀ PHÁT TRIỂN
+                                            NĂNG LƯỢNG XANH
+                                        </div>
                                     </div>
                                 </div>
 
@@ -527,22 +580,72 @@
                                     class="w-full sm:w-1/2 lg:w-1/3 flex-shrink-0 px-3"
                                 >
                                     <div
-                                        class="bg-white rounded-lg shadow p-6 flex flex-col items-center"
+                                        class="bg-white rounded-lg shadow p-6 flex flex-col items-center h-full"
                                     >
                                         <img
-                                            src="https://i.pravatar.cc/150?img=51"
-                                            class="w-28 h-28 rounded-lg object-cover mb-4"
+                                            src="image/logo/thanh bình bca.png"
+                                            class="w-[10rem] h-[10rem] p-4 object-contain mb-4"
+                                            alt="Logo CÔNG TY TNHH MTV THANH BÌNH BCA"
                                         />
-                                        <p
-                                            class="text-gray-700 mb-3 leading-relaxed text-sm text-center"
+                                        <div
+                                            class="font-bold text-gray-900 px-2 pt-2 min-h-[4rem] flex items-center justify-center"
                                         >
-                                            Dịch vụ giao hàng nhanh, nhân viên
-                                            nhiệt tình và thân thiện. Tôi rất
-                                            hài lòng!
-                                        </p>
-                                        <p class="font-bold text-gray-900">
-                                            Lê Thị Hồng
-                                        </p>
+                                            CÔNG TY TNHH MTV THANH BÌNH BCA
+                                        </div>
+                                    </div>
+                                </div>
+                                <div
+                                    class="w-full sm:w-1/2 lg:w-1/3 flex-shrink-0 px-3"
+                                >
+                                    <div
+                                        class="bg-white rounded-lg shadow p-6 flex flex-col items-center h-full"
+                                    >
+                                        <img
+                                            src="image/logo/trường giang.jpg"
+                                            class="w-[10rem] h-[10rem] p-4 object-contain mb-4"
+                                            alt="Logo CÔNG TY CỔ PHẦN CƠ KHÍ TRƯỜNG GIANG"
+                                        />
+                                        <div
+                                            class="font-bold text-gray-900 px-2 pt-2 min-h-[4rem] flex items-center justify-center"
+                                        >
+                                            CÔNG TY CỔ PHẦN CƠ KHÍ TRƯỜNG GIANG
+                                        </div>
+                                    </div>
+                                </div>
+                                <div
+                                    class="w-full sm:w-1/2 lg:w-1/3 flex-shrink-0 px-3"
+                                >
+                                    <div
+                                        class="bg-white rounded-lg shadow p-6 flex flex-col items-center h-full"
+                                    >
+                                        <img
+                                            src="image/logo/xuân hòa.png"
+                                            class="w-[10rem] h-[10rem] p-4 object-contain mb-4"
+                                            alt="Logo Xuân Hòa"
+                                        />
+                                        <div
+                                            class="font-bold text-gray-900 px-2 pt-2 min-h-[4rem] flex items-center justify-center"
+                                        >
+                                            LÊ THỊ HỒNG (XUÂN HÒA)
+                                        </div>
+                                    </div>
+                                </div>
+                                <div
+                                    class="w-full sm:w-1/2 lg:w-1/3 flex-shrink-0 px-3"
+                                >
+                                    <div
+                                        class="bg-white rounded-lg shadow p-6 flex flex-col items-center h-full"
+                                    >
+                                        <img
+                                            src="image/logo/Năng lượng xanh.png"
+                                            class="w-[10rem] h-[10rem] p-4 object-contain mb-4"
+                                            alt="Logo Năng Lượng Xanh (Duplicate Example)"
+                                        />
+                                        <div
+                                            class="font-bold text-gray-900 px-2 pt-2 min-h-[4rem] flex items-center justify-center"
+                                        >
+                                            LÊ THỊ HỒNG (NĂNG LƯỢNG XANH)
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -565,8 +668,65 @@
             </section>
         </main>
 
+        <!-- Các nút cố định -->
+        <div
+            class="fixed bottom-5 right-5 flex flex-col items-center gap-2.5 z-[200]"
+        >
+            <!-- Nút Gmail -->
+            <a
+                href="mailto:example@gmail.com"
+                class="bg-white hover:bg-white text-white w-10 h-10 flex items-center justify-center rounded-full shadow-md transition-all duration-300 hover:scale-110"
+                title="Gửi Email"
+            >
+                <img
+                    class="XNo5Ab"
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAilBMVEVHcEzqQzXuYyrFIh/GIRv8vQPuPzQyqFNChfTpSzDqQzXqQzXqQzVChfRChfRChfT5vQPqQzVChfT7vAT7vAT2OwM0qFM0qFP7vASTVZE0iv6wszHrQzUzqFNChfTFIh77vATCHxvqNTf8wwA4iPr/vQDLFwUeqFVedtZdq0mIXJ+dsTetPV3Ttx+fS93FAAAAHHRSTlMAcQddta+zsbYlaXrBuH233MnEcEe4eHNesLeohNumBwAAANtJREFUOI3N0dkSgjAMBdCAgqAi476FUrDF/f9/T0INIlR99T6F3jNkOgX4j4Q967G7CM3QT9PUQuZSSo+GXkrpt3tPUjbPH5TB8G1rfqiAV4MMcfjqHbQB9LkfYxNsCwZo1oQ0VUDrffm9O2UFA1rjIAMtz4MSBErcCgbo+8hA349JBYRQl4IBJz/o6zFhINSpC85lXwOh1PId+FQ3gBAwavYOJB1grod8XQsAmJp6TLMVmDUOfAa05vloHwC4LnwHdV4g/gWiX2DyDaxpnERxEMzaYEBZtU//NA+SXS8p5NKJkwAAAABJRU5ErkJggg=="
+                    style="height: 18px; width: 18px"
+                    alt=""
+                    data-csiid="Q5T7aOHEBaPd2roP2-qS-Qo_2"
+                    data-atf="1"
+                />
+            </a>
+
+            <!-- Nút Messenger -->
+            <a
+                href="https://m.me/yourpage"
+                target="_blank"
+                class="bg-blue-500 hover:bg-blue-600 text-white w-10 h-10 flex items-center justify-center rounded-full shadow-md transition-all duration-300 hover:scale-110"
+                title="Chat Messenger"
+            >
+                <img
+                    class="_1-kh _93s6 img"
+                    src="https://scontent-dfw5-1.xx.fbcdn.net/v/t39.8562-6/475210330_598195142840489_9172482348551739153_n.png?_nc_cat=1&amp;ccb=1-7&amp;_nc_sid=f537c7&amp;_nc_ohc=X2H5L8Q3tmQQ7kNvwGL2c4a&amp;_nc_oc=AdkTuBD-earIf-ivqd1fyEWtuV9T-Y3_CXQd1Rno2zKBmxvKjOtKYwSDx8euR6DfznwpJz0-8y1W9vaVJ2ZxIUzT&amp;_nc_zt=14&amp;_nc_ht=scontent-dfw5-1.xx&amp;_nc_gid=31sqCh3UMFESsw7hFADRsg&amp;oh=00_AfeHvRF0zMZO3KcFAyO1Mm8atCAWcsfFLPL0LVD4PT-taw&amp;oe=69015D18"
+                    alt="Messenger"
+                />
+            </a>
+
+            <!-- Nút cuộn lên đầu trang -->
+            <button
+                id="scrollToTopBtn"
+                class="bg-gray-700 hover:bg-gray-800 text-white w-10 h-10 flex items-center justify-center rounded-full shadow-md transition-all duration-300 hover:scale-110"
+                title="Lên đầu trang"
+            >
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="2"
+                    stroke="currentColor"
+                    class="w-5 h-5"
+                >
+                    <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M5 15l7-7 7 7"
+                    />
+                </svg>
+            </button>
+        </div>
+
         <!-- FOOTER -->
-        <footer class="relative py-12 md:py-20 overflow-hidden">
+        <footer id="contact" class="relative py-12 md:py-20 overflow-hidden">
             <div class="absolute inset-0">
                 <img
                     src="image//anh.png"
@@ -588,34 +748,38 @@
                     <p class="text-2xl font-bold mb-2">
                         CÔNG TY TNHH TRƯỜNG AN
                     </p>
-                    <p class="font-light mb-1">Hotline: 024.xxx.xxxxx</p>
-                    <p class="font-light mb-1">
-                        Email: congtytnhhtruongan1997@gmail.com
+                    <p class="font-light mb-1 flex items-center gap-2">
+                        <img
+                            src="/image/Phone Khung tron.svg"
+                            class="h-4 w-4"
+                        />Hotline: 024.xxx.xxxxx
                     </p>
-                    <p class="font-light">
-                        Địa chỉ: Thôn Chiêm Mai, Xã Phụng Công, Tỉnh Hưng Yên,
-                        Việt Nam
+                    <p class="font-light mb-1 flex items-center gap-2">
+                        <img src="/image/Maill.svg" class="h-4 w-4" />Email:
+                        congtytnhhtruongan1997@gmail.com
+                    </p>
+                    <p class="font-light flex items-center gap-2">
+                        <img src="/image/Location (1).svg" class="h-4 w-4" />Địa
+                        chỉ: Thôn Chiêm Mai, Xã Phụng Công, Tỉnh Hưng Yên, Việt
+                        Nam
                     </p>
                 </div>
 
-                <div class="w-[400px]">
-                    <div class="border-b border-white pb-2 mb-6">
-                        Họ và tên:
+                <div class="w-[400px] flex justify-between">
+                    <div>
+                        <p class="mb-8 font-semibold">SẢN PHẨM</p>
+                        <p class="mb-4 text-sm">Thép xây dựng</p>
+                        <p class="mb-4 text-sm">Thép hình</p>
+                        <p class="mb-4 text-sm">Thép tấm cuộn</p>
+                        <p class="mb-4 text-sm">Thép ống hộp</p>
+                        <p class="mb-4 text-sm">Tấm lợp, tôn sàn, xà gỗ</p>
                     </div>
-                    <div class="flex gap-4 mb-6">
-                        <p class="border-b border-white pb-2 w-1/2">
-                            Số điện thoại:
+                    <div>
+                        <p class="mb-8 font-semibold text-base">
+                            DANH MỤC TÀI LIỆU
                         </p>
-                        <p class="border-b border-white pb-2 w-1/2">Email:</p>
-                    </div>
-                    <div class="border-b border-white pb-2 mb-6">Nội dung:</div>
-                    <div class="flex justify-end">
-                        <button
-                            type="submit"
-                            class="w-fit font-light bg-white/50 text-white py-2 px-12 rounded-md font-semibold text-lg border border-white hover:bg-white/20 transition duration-300 ease-in-out text-sm"
-                        >
-                            Gửi Nội Dung
-                        </button>
+                        <p class="mb-4 text-sm">Download catalogue</p>
+                        <p class="mb-4 text-sm">Download hồ sơ năng lực</p>
                     </div>
                 </div>
             </div>
@@ -625,10 +789,10 @@
             >
                 <h3 class="text-xl font-bold mb-4">Vị trí của chúng tôi</h3>
                 <div
-                    class="w-[500px] h-[400px] overflow-hidden rounded-lg shadow-xl"
+                    class="w-[500px] h-[300px] overflow-hidden rounded-lg shadow-xl"
                 >
                     <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4812.052022949773!2d105.91383408725346!3d20.97420493079888!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135afbaddee2ac1%3A0x4660280921e4d61d!2zxJDhurZDIEtIVSBDSEnDik0gTUFJ!5e1!3m2!1sen!2s!4v1761185321179!5m2!1sen!2s"
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d331.85581323569164!2d105.91956371951932!3d20.975439395887264!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135afda1c71c077%3A0xad8478999780a776!2zQ8OUTkcgVFkgVE5ISCBUUsav4bucTkcgQU4!5e1!3m2!1svi!2s!4v1761227225400!5m2!1svi!2s"
                         width="600"
                         height="450"
                         style="border: 0"
@@ -642,4 +806,13 @@
     </body>
     <script src="js/carousel.js"></script>
     <script src="js/feedback.js"></script>
+
+    <!-- Mobile Menu -->
+    <script src="js/mobileMenu.js"></script>
+
+    <!-- Cuộn lên trên cùng -->
+    <script src="js/scrollToTop.js"></script>
+
+    <!-- Cuộn xuống cuối trang -->
+    <script src="js/scrollToBottom.js"></script>
 </html>

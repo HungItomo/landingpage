@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Landing Page</title>
+        <script>
+            tailwind.config = {
+                theme: {
+                    fontFamily: {
+                        sans: ["SF Pro Display"],
+                    },
+                },
+            };
+        </script>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="stylesheet" href="index.css" />
+        <style>
+            @font-face {
+                font-family: "SF Pro Display";
+                src: url("fonts/SF-Pro.ttf") format("truetype");
+                font-weight: normal;
+                font-style: normal;
+                font-display: swap;
+            }
+
+            .gradient-overlay {
+                background: linear-gradient(
+                    to right,
+                    rgba(0, 0, 0, 0.7),
+                    rgba(0, 0, 0, 0)
+                );
+            }
+
+            /* Ẩn thanh cuộn trên các thiết bị mobile/tablet nếu cần (chỉ là ví dụ) */
+            /* body {
+                overflow-x: hidden;
+            } */
+        </style>
+    </head>
+    <body class="bg-gray-50 text-gray-800">
+        <!-- HEADER -->
+        <header class="bg-[#7B542F] shadow-md w-full z-50">
+            <div
+                class="max-w-full md:max-w-4xl lg:max-w-5xl mx-auto px-4 md:px-6 py-2 flex flex-wrap md:flex-nowrap justify-between items-center"
+            >
+                <a href="./gioi-thieu.html" class="inline-block cursor-pointer">
+                    <img
+                        src="../image/Logo.svg"
+                        alt="MyBrand Logo"
+                        class="h-16 md:h-16 w-auto flex-shrink-0"
+                    />
+                </a>
+
+                <button
+                    id="mobile-menu-button"
+                    class="md:hidden text-white p-2"
+                >
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-6 w-6"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                        stroke-width="2"
+                    >
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M4 6h16M4 12h16M4 18h16"
+                        />
+                    </svg>
+                </button>
+
+                <div
+                    id="navigation-content"
+                    class="hidden md:flex w-full md:w-auto mt-2 md:mt-0 flex-col gap-2 justify-end items-end"
+                >
+                    <div
+                        class="flex w-full md:w-auto gap-4 items-center justify-end"
+                    >
+                        <div class="relative w-44 h-6">
+                            <input
+                                type="text"
+                                placeholder="Tìm kiếm..."
+                                class="p-2 pr-8 rounded-sm text-xs md:text-sm text-white bg-transparent border border-white/50 focus:outline-none w-full h-full placeholder-white/70"
+                            />
+                            <span
+                                class="absolute right-1 top-1/2 transform -translate-y-1/2 w-4 h-4 text-white"
+                            >
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke-width="1.5"
+                                    stroke="currentColor"
+                                    class="w-full h-full"
+                                >
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                                    />
+                                </svg>
+                            </span>
+                        </div>
+                        <div class="flex gap-1">
+                            <img
+                                src="../image/facebook.png"
+                                alt="Facebook"
+                                class="w-5 h-5 md:w-6 md:h-6 cursor-pointer"
+                            />
+                            <img
+                                src="../image/youtube.png"
+                                alt="YouTube"
+                                class="w-5 h-5 md:w-6 md:h-6 cursor-pointer"
+                            />
+                        </div>
+                    </div>
+                    <nav
+                        class="flex flex-col md:flex-row gap-2 md:gap-8 lg:gap-20 text-white w-full md:w-auto justify-end items-start md:items-center py-2"
+                    >
+                        <a
+                            href="../index.html"
+                            class="hover:text-[#FFD700] text-sm md:text-sm"
+                            >Giới thiệu</a
+                        >
+
+                        <div class="relative group">
+                            <a
+                                href="#"
+                                class="hover:text-[#FFD700] text-sm md:text-sm flex items-center gap-1"
+                            >
+                                Sản phẩm
+                            </a>
+
+                            <!-- Menu dropdown -->
+                            <div
+                                class="absolute opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:translate-y-2 bg-white text-black shadow-lg rounded-sm py-2 px-4 top-full left-0 min-w-[12rem] md:min-w-max border border-gray-200 z-[100] transition-all duration-300 ease-out"
+                            >
+                                <a
+                                    href="/products/thep-can-nguoi.html"
+                                    class="block px-4 py-2 text-sm hover:bg-gray-100 hover:text-[#7B542F] whitespace-nowrap"
+                                    >Thép cán nguội</a
+                                >
+                                <a
+                                    href="/products/thep-can-nong.html"
+                                    class="block px-4 py-2 text-sm hover:bg-gray-100 hover:text-[#7B542F] whitespace-nowrap"
+                                    >Thép cán nóng</a
+                                >
+                                <a
+                                    href="/products/thep-ma-kem.html"
+                                    class="block px-4 py-2 text-sm hover:bg-gray-100 hover:text-[#7B542F] whitespace-nowrap"
+                                    >Thép mạ kẽm</a
+                                ><a
+                                    href="/products/thep-khong-ri.html"
+                                    class="block px-4 py-2 text-sm hover:bg-gray-100 hover:text-[#7B542F] whitespace-nowrap"
+                                    >Thép không rỉ (inox)</a
+                                ><a
+                                    href="/products/thep-hinh-ong-hop.html"
+                                    class="block px-4 py-2 text-sm hover:bg-gray-100 hover:text-[#7B542F] whitespace-nowrap"
+                                    >Thép hình ,Thép ống, thép hộp</a
+                                ><a
+                                    href="/products/thep-xay-dung.html"
+                                    class="block px-4 py-2 text-sm hover:bg-gray-100 hover:text-[#7B542F] whitespace-nowrap"
+                                    >Thép xây dựng
+                                </a>
+                            </div>
+                        </div>
+                        <a
+                            href="#"
+                            class="hover:text-[#FFD700] text-sm md:text-sm"
+                            >Dịch vụ</a
+                        >
+                        <a
+                            href="#"
+                            class="hover:text-[#FFD700] text-sm md:text-sm"
+                            >Chất lượng</a
+                        >
+                        <a
+                            href="#"
+                            class="hover:text-[#FFD700] text-sm md:text-sm"
+                            >Tin tức</a
+                        >
+                        <a
+                            href="#"
+                            id="contact-link"
+                            class="hover:text-[#FFD700] text-sm md:text-sm"
+                            >Liên hệ</a
+                        >
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <!-- BODY -->
+        <main class="bg-white">
+            <!-- SECTION: THUÊ KHO -->
+            <section
+                class="product-detail-section bg-white text-gray-800 py-12 px-6 md:px-12 max-w-5xl mx-auto"
+            >
+                <h1
+                    class="text-3xl font-semibold text-[#7B542F] mb-6 text-center"
+                >
+                    Thuê kho xưởng Trường An
+                </h1>
+
+                <div class="space-y-6 leading-relaxed text-justify">
+                    <div>
+                        <h2 class="text-xl font-semibold text-[#7B542F] mb-2">
+                            Giới thiệu
+                        </h2>
+                        <p>
+                            Trường An là đơn vị
+                            <strong>cho thuê kho xưởng chuyên nghiệp</strong>,
+                            với hơn 20 kho xưởng hiện đại được đầu tư, xây dựng
+                            và quản lý theo tiêu chuẩn công nghiệp. Các kho được
+                            đặt tại vị trí chiến lược gồm
+                            <strong>Xuân Quan</strong> và
+                            <strong>Tân Tiến</strong> (huyện Văn Giang, Hưng
+                            Yên), thuận tiện kết nối với trung tâm Hà Nội và các
+                            khu công nghiệp lân cận.
+                        </p>
+                        <p class="mt-2">
+                            Chúng tôi cung cấp diện tích linh hoạt từ
+                            <strong>1.000m² đến 3.000m²</strong>, đáp ứng nhu
+                            cầu của nhiều loại hình doanh nghiệp: sản xuất, lưu
+                            trữ hàng hóa, logistics, thương mại điện tử hoặc
+                            trung chuyển phân phối.
+                        </p>
+                    </div>
+
+                    <div>
+                        <h2 class="text-xl font-semibold text-[#7B542F] mb-2">
+                            Đặc điểm và lợi thế
+                        </h2>
+                        <ul class="list-disc pl-6 space-y-2">
+                            <li>
+                                <strong>Diện tích đa dạng:</strong> Từ 1.000m²
+                                đến 3.000m², phù hợp cho nhiều mục đích lưu trữ
+                                hoặc sản xuất.
+                            </li>
+                            <li>
+                                <strong>Vị trí thuận lợi:</strong> Dễ dàng kết
+                                nối với trung tâm Hà Nội, cao tốc Hà Nội – Hải
+                                Phòng và các tuyến vận tải chính.
+                            </li>
+                            <li>
+                                <strong
+                                    >Hạ tầng tiêu chuẩn – an toàn và hiện
+                                    đại:</strong
+                                >
+                                Kho xưởng được xây dựng kiên cố, khung thép, mái
+                                cao 6–8m, nền bê tông chịu lực tốt.
+                            </li>
+                            <li>
+                                <strong>Tiện ích đầy đủ:</strong> Điện 3 pha,
+                                nước sạch, hệ thống PCCC, bảo vệ 24/7, xe
+                                container ra vào thuận tiện.
+                            </li>
+                            <li>
+                                <strong
+                                    >Chi phí hợp lý – thủ tục nhanh gọn:</strong
+                                >
+                                Giá thuê cạnh tranh, hợp đồng minh bạch, linh
+                                hoạt thời hạn thuê.
+                            </li>
+                            <li>
+                                <strong>Uy tín và kinh nghiệm:</strong> Trường
+                                An có nhiều năm hoạt động trong lĩnh vực cho
+                                thuê kho xưởng tại Hưng Yên, là đối tác tin cậy
+                                của nhiều doanh nghiệp lớn nhỏ.
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h2 class="text-xl font-semibold text-[#7B542F] mb-2">
+                            Cam kết
+                        </h2>
+                        <p>
+                            Với định hướng phát triển hạ tầng kho xưởng chuyên
+                            nghiệp, bền vững và hiệu quả, Trường An cam kết mang
+                            đến cho khách hàng
+                            <strong
+                                >không gian làm việc tối ưu, chi phí hợp
+                                lý</strong
+                            >
+                            cùng <strong>dịch vụ hỗ trợ tận tâm</strong>.
+                        </p>
+                    </div>
+
+                    <div>
+                        <h2 class="text-xl font-semibold text-[#7B542F] mb-2">
+                            Liên hệ
+                        </h2>
+                        <ul class="list-none pl-0 space-y-2">
+                            <li>
+                                📞 <strong>Hotline:</strong> [Điền số điện
+                                thoại]
+                            </li>
+                            <li>
+                                📧
+                                <strong>Email:</strong>
+                                congtytnhhtruongan1997@gmail.com
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="mt-10">
+                    <img
+                        src="image/Anh3.jpg"
+                        alt="Kho xưởng Trường An"
+                        class="w-full max-h-[500px] object-cover rounded-lg shadow-md"
+                    />
+                </div>
+            </section>
+        </main>
+
+        <!-- Các nút cố định -->
+        <div
+            class="fixed bottom-5 right-5 flex flex-col items-center gap-2.5 z-[200]"
+        >
+            <!-- Nút Gmail -->
+            <a
+                href="mailto:example@gmail.com"
+                class="bg-white hover:bg-white text-white w-10 h-10 flex items-center justify-center rounded-full shadow-md transition-all duration-300 hover:scale-110"
+                title="Gửi Email"
+            >
+                <img
+                    class="XNo5Ab"
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAilBMVEVHcEzqQzXuYyrFIh/GIRv8vQPuPzQyqFNChfTpSzDqQzXqQzXqQzVChfRChfRChfT5vQPqQzVChfT7vAT7vAT2OwM0qFM0qFP7vASTVZE0iv6wszHrQzUzqFNChfTFIh77vATCHxvqNTf8wwA4iPr/vQDLFwUeqFVedtZdq0mIXJ+dsTetPV3Ttx+fS93FAAAAHHRSTlMAcQddta+zsbYlaXrBuH233MnEcEe4eHNesLeohNumBwAAANtJREFUOI3N0dkSgjAMBdCAgqAi476FUrDF/f9/T0INIlR99T6F3jNkOgX4j4Q967G7CM3QT9PUQuZSSo+GXkrpt3tPUjbPH5TB8G1rfqiAV4MMcfjqHbQB9LkfYxNsCwZo1oQ0VUDrffm9O2UFA1rjIAMtz4MSBErcCgbo+8hA349JBYRQl4IBJz/o6zFhINSpC85lXwOh1PId+FQ3gBAwavYOJB1grod8XQsAmJp6TLMVmDUOfAa05vloHwC4LnwHdV4g/gWiX2DyDaxpnERxEMzaYEBZtU//NA+SXS8p5NKJkwAAAABJRU5ErkJggg=="
+                    style="height: 18px; width: 18px"
+                    alt=""
+                    data-csiid="Q5T7aOHEBaPd2roP2-qS-Qo_2"
+                    data-atf="1"
+                />
+            </a>
+
+            <!-- Nút Messenger -->
+            <a
+                href="https://m.me/yourpage"
+                target="_blank"
+                class="bg-blue-500 hover:bg-blue-600 text-white w-10 h-10 flex items-center justify-center rounded-full shadow-md transition-all duration-300 hover:scale-110"
+                title="Chat Messenger"
+            >
+                <img
+                    class="_1-kh _93s6 img"
+                    src="https://scontent-dfw5-1.xx.fbcdn.net/v/t39.8562-6/475210330_598195142840489_9172482348551739153_n.png?_nc_cat=1&amp;ccb=1-7&amp;_nc_sid=f537c7&amp;_nc_ohc=X2H5L8Q3tmQQ7kNvwGL2c4a&amp;_nc_oc=AdkTuBD-earIf-ivqd1fyEWtuV9T-Y3_CXQd1Rno2zKBmxvKjOtKYwSDx8euR6DfznwpJz0-8y1W9vaVJ2ZxIUzT&amp;_nc_zt=14&amp;_nc_ht=scontent-dfw5-1.xx&amp;_nc_gid=31sqCh3UMFESsw7hFADRsg&amp;oh=00_AfeHvRF0zMZO3KcFAyO1Mm8atCAWcsfFLPL0LVD4PT-taw&amp;oe=69015D18"
+                    alt="Messenger"
+                />
+            </a>
+
+            <!-- Nút cuộn lên đầu trang -->
+            <button
+                id="scrollToTopBtn"
+                class="bg-gray-700 hover:bg-gray-800 text-white w-10 h-10 flex items-center justify-center rounded-full shadow-md transition-all duration-300 hover:scale-110"
+                title="Lên đầu trang"
+            >
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="2"
+                    stroke="currentColor"
+                    class="w-5 h-5"
+                >
+                    <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M5 15l7-7 7 7"
+                    />
+                </svg>
+            </button>
+        </div>
+
+        <!-- FOOTER -->
+        <footer id="contact" class="relative py-12 md:py-20 overflow-hidden">
+            <div class="absolute inset-0">
+                <img
+                    src="image//anh.png"
+                    alt="Background Footer"
+                    class="w-full h-full object-cover"
+                />
+                <div class="absolute inset-0 opacity-75"></div>
+            </div>
+
+            <div
+                class="relative z-10 max-w-7xl mx-auto px-4 md:px-6 flex flex-col md:flex-row justify-between items-center space-y-10 md:space-y-0 text-sm md:text-base text-white border-b border-white/30 pb-10 mb-10"
+            >
+                <div>
+                    <img
+                        src="image/Logo.svg"
+                        alt="MyBrand Logo"
+                        class="h-28 md:h-32 w-auto flex-shrink-0 mb-4"
+                    />
+                    <p class="text-2xl font-bold mb-2">
+                        CÔNG TY TNHH TRƯỜNG AN
+                    </p>
+                    <p class="font-light mb-1 flex items-center gap-2">
+                        <img
+                            src="/image/Phone Khung tron.svg"
+                            class="h-4 w-4"
+                        />Hotline: 024.xxx.xxxxx
+                    </p>
+                    <p class="font-light mb-1 flex items-center gap-2">
+                        <img src="/image/Maill.svg" class="h-4 w-4" />Email:
+                        congtytnhhtruongan1997@gmail.com
+                    </p>
+                    <p class="font-light flex items-center gap-2">
+                        <img src="/image/Location (1).svg" class="h-4 w-4" />Địa
+                        chỉ: Thôn Chiêm Mai, Xã Phụng Công, Tỉnh Hưng Yên, Việt
+                        Nam
+                    </p>
+                </div>
+
+                <div class="w-[400px] flex justify-between">
+                    <div>
+                        <p class="mb-8 font-semibold">SẢN PHẨM</p>
+                        <p class="mb-4 text-sm">Thép xây dựng</p>
+                        <p class="mb-4 text-sm">Thép hình</p>
+                        <p class="mb-4 text-sm">Thép tấm cuộn</p>
+                        <p class="mb-4 text-sm">Thép ống hộp</p>
+                        <p class="mb-4 text-sm">Tấm lợp, tôn sàn, xà gỗ</p>
+                    </div>
+                    <div>
+                        <p class="mb-8 font-semibold text-base">
+                            DANH MỤC TÀI LIỆU
+                        </p>
+                        <p class="mb-4 text-sm">Download catalogue</p>
+                        <p class="mb-4 text-sm">Download hồ sơ năng lực</p>
+                    </div>
+                </div>
+            </div>
+
+            <div
+                class="relative z-10 max-w-7xl mx-auto px-4 md:px-6 text-white"
+            >
+                <h3 class="text-xl font-bold mb-4">Vị trí của chúng tôi</h3>
+                <div
+                    class="w-[500px] h-[300px] overflow-hidden rounded-lg shadow-xl"
+                >
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d331.85581323569164!2d105.91956371951932!3d20.975439395887264!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135afda1c71c077%3A0xad8478999780a776!2zQ8OUTkcgVFkgVE5ISCBUUsav4bucTkcgQU4!5e1!3m2!1svi!2s!4v1761227225400!5m2!1svi!2s"
+                        width="600"
+                        height="450"
+                        style="border: 0"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                    ></iframe>
+                </div>
+            </div>
+        </footer>
+    </body>
+    <script src="js/carousel.js"></script>
+    <script src="js/feedback.js"></script>
+
+    <!-- Mobile Menu -->
+    <script src="js/mobileMenu.js"></script>
+
+    <!-- Cuộn lên trên cùng -->
+    <script src="js/scrollToTop.js"></script>
+
+    <!-- Cuộn xuống cuối trang -->
+    <script src="js/scrollToBottom.js"></script>
+</html>

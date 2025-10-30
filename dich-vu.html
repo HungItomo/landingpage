@@ -388,69 +388,98 @@
             </div>
 
             <div
-                class="relative z-10 max-w-7xl mx-auto px-4 md:px-6 flex flex-col md:flex-row justify-between items-center space-y-10 md:space-y-0 text-sm md:text-base text-white border-b border-white/30 pb-10 mb-10"
-            >
-                <div>
-                    <img
-                        src="image/Logo.svg"
-                        alt="MyBrand Logo"
-                        class="h-28 md:h-32 w-auto flex-shrink-0 mb-4"
-                    />
-                    <p class="text-2xl font-bold mb-2">
-                        CÔNG TY TNHH TRƯỜNG AN
-                    </p>
-                    <p class="font-light mb-1 flex items-center gap-2">
-                        <img
-                            src="/image/Phone Khung tron.svg"
-                            class="h-4 w-4"
-                        />Hotline: 024.xxx.xxxxx
-                    </p>
-                    <p class="font-light mb-1 flex items-center gap-2">
-                        <img src="/image/Maill.svg" class="h-4 w-4" />Email:
-                        congtytnhhtruongan1997@gmail.com
-                    </p>
-                    <p class="font-light flex items-center gap-2">
-                        <img src="/image/Location (1).svg" class="h-4 w-4" />Địa
-                        chỉ: Thôn Chiêm Mai, Xã Phụng Công, Tỉnh Hưng Yên, Việt
-                        Nam
-                    </p>
-                </div>
-
-                <div class="w-[400px] flex justify-between">
-                    <div>
-                        <p class="mb-8 font-semibold">SẢN PHẨM</p>
-                        <p class="mb-4 text-sm">Thép xây dựng</p>
-                        <p class="mb-4 text-sm">Thép hình</p>
-                        <p class="mb-4 text-sm">Thép tấm cuộn</p>
-                        <p class="mb-4 text-sm">Thép ống hộp</p>
-                        <p class="mb-4 text-sm">Tấm lợp, tôn sàn, xà gỗ</p>
-                    </div>
-                    <div>
-                        <p class="mb-8 font-semibold text-base">
-                            DANH MỤC TÀI LIỆU
-                        </p>
-                        <p class="mb-4 text-sm">Download catalogue</p>
-                        <p class="mb-4 text-sm">Download hồ sơ năng lực</p>
-                    </div>
-                </div>
-            </div>
-
-            <div
                 class="relative z-10 max-w-7xl mx-auto px-4 md:px-6 text-white"
             >
-                <h3 class="text-xl font-bold mb-4">Vị trí của chúng tôi</h3>
+                <!-- PHẦN 1: Logo + thông tin công ty -->
                 <div
-                    class="w-[500px] h-[300px] overflow-hidden rounded-lg shadow-xl"
+                    class="flex flex-col md:flex-row justify-between items-center text-sm md:text-base border-b border-white/30 pb-10 mb-10"
                 >
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d331.85581323569164!2d105.91956371951932!3d20.975439395887264!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135afda1c71c077%3A0xad8478999780a776!2zQ8OUTkcgVFkgVE5ISCBUUsav4bucTkcgQU4!5e1!3m2!1svi!2s!4v1761227225400!5m2!1svi!2s"
-                        width="600"
-                        height="450"
-                        style="border: 0"
-                        allowfullscreen=""
-                        loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"
-                    ></iframe>
+                    <div class="text-center md:text-left mb-10 md:mb-0">
+                        <img
+                            src="image/Logo.svg"
+                            alt="MyBrand Logo"
+                            class="h-28 md:h-32 w-auto mx-auto md:mx-0 mb-4"
+                        />
+                        <p class="text-2xl font-bold mb-2">
+                            CÔNG TY TNHH TRƯỜNG AN
+                        </p>
+                        <p
+                            class="font-light mb-1 flex items-center justify-center md:justify-start gap-2"
+                        >
+                            <img
+                                src="/image/Phone Khung tron.svg"
+                                class="h-4 w-4"
+                            />
+                            Hotline: 024.xxx.xxxxx
+                        </p>
+                        <p
+                            class="font-light mb-1 flex items-center justify-center md:justify-start gap-2"
+                        >
+                            <img src="/image/Maill.svg" class="h-4 w-4" />Email:
+                            congtytnhhtruongan1997@gmail.com
+                        </p>
+                        <p
+                            class="font-light flex items-center justify-center md:justify-start gap-2"
+                        >
+                            <img
+                                src="/image/Location (1).svg"
+                                class="h-4 w-4"
+                            />Địa chỉ: Thôn Chiêm Mai, Xã Phụng Công, Tỉnh Hưng
+                            Yên, Việt Nam
+                        </p>
+                    </div>
+                    <div class="w-[400px]">
+                        <p class="border-b border-white pb-2 mb-8">
+                            Họ và tên:
+                        </p>
+                        <div class="flex gap-4 mb-8">
+                            <p class="border-b border-white pb-2 flex-1">
+                                Số điện thoại:
+                            </p>
+                            <p class="border-b border-white pb-2 flex-1">
+                                Email:
+                            </p>
+                        </div>
+                        <p class="border-b border-white pb-2 mb-4">Nội dung:</p>
+                    </div>
+                </div>
+
+                <!-- PHẦN 2: Sản phẩm + Danh mục + Bản đồ -->
+                <div
+                    class="flex flex-col md:flex-row justify-between items-start gap-10"
+                >
+                    <div
+                        class="w-[500px] h-[300px] overflow-hidden rounded-lg shadow-xl"
+                    >
+                        <h3 class="text-xl font-bold mb-4">
+                            Vị trí của chúng tôi
+                        </h3>
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d331.85581323569164!2d105.91956371951932!3d20.975439395887264!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135afda1c71c077%3A0xad8478999780a776!2zQ8OUTkcgVFkgVE5ISCBUUsav4bucTkcgQU4!5e1!3m2!1svi!2s!4v1761227225400!5m2!1svi!2s"
+                            class="w-full h-full"
+                            style="border: 0"
+                            allowfullscreen=""
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"
+                        ></iframe>
+                    </div>
+                    <div class="flex w-[400px] justify-between gap-10">
+                        <div>
+                            <p class="mb-8 font-semibold text-base">SẢN PHẨM</p>
+                            <p class="mb-4 text-sm">Thép xây dựng</p>
+                            <p class="mb-4 text-sm">Thép hình</p>
+                            <p class="mb-4 text-sm">Thép tấm cuộn</p>
+                            <p class="mb-4 text-sm">Thép ống hộp</p>
+                            <p class="mb-4 text-sm">Tấm lợp, tôn sàn, xà gỗ</p>
+                        </div>
+                        <div>
+                            <p class="mb-8 font-semibold text-base">
+                                DANH MỤC TÀI LIỆU
+                            </p>
+                            <p class="mb-4 text-sm">Download catalogue</p>
+                            <p class="mb-4 text-sm">Download hồ sơ năng lực</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </footer>

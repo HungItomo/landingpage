@@ -24,3 +24,20 @@
 .testimonial-bg {
     background-color: #fcfbf8; /* Màu nền nhạt */
 }
+::-webkit-scrollbar {
+    width: 6px; /* Độ rộng thanh cuộn */
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Màu nền track */
+    border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #b5b5b5; /* Màu thanh kéo */
+    border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #8c8c8c; /* Màu khi hover */
+}

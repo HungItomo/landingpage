@@ -341,6 +341,34 @@
                         />
                     </div>
                 </div>
+                <div
+                    id="imageModal"
+                    class="hidden fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center"
+                >
+                    <span
+                        class="absolute top-4 right-6 text-white text-5xl font-light cursor-pointer select-none"
+                        onclick="closeModal()"
+                        >&times;</span
+                    >
+
+                    <a
+                        class="absolute top-1/2 left-4 transform -translate-y-1/2 text-white text-4xl p-2 cursor-pointer select-none hover:text-gray-300 transition"
+                        onclick="changeImage(-1)"
+                        >&#10094;</a
+                    >
+
+                    <img
+                        class="max-w-[90%] max-h-[90%] object-contain transition-opacity duration-300"
+                        id="modalImage"
+                        src=""
+                    />
+
+                    <a
+                        class="absolute top-1/2 right-4 transform -translate-y-1/2 text-white text-4xl p-2 cursor-pointer select-none hover:text-gray-300 transition"
+                        onclick="changeImage(1)"
+                        >&#10095;</a
+                    >
+                </div>
             </section>
         </main>
 
@@ -584,6 +612,7 @@
     </body>
     <script src="js/carousel.js"></script>
     <script src="js/feedback.js"></script>
+    <script src="../js/openModal.js"></script>
 
     <!-- Mobile Menu -->
     <script src="js/mobileMenu.js"></script>

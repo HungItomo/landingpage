@@ -49,7 +49,7 @@
                     <img
                         src="../image/Logo.svg"
                         alt="MyBrand Logo"
-                        class="h-16 md:h-16 w-auto flex-shrink-0"
+                        class="h-20 md:h-20 w-auto flex-shrink-0"
                     />
                 </a>
 
@@ -320,12 +320,26 @@
                 </div>
 
                 <!-- Ảnh minh họa -->
-                <div class="mt-10">
-                    <img
-                        src="../image/Anh5.jpg"
-                        alt="Ảnh thép không gỉ (inox)"
-                        class="w-full max-h-[500px] object-cover rounded-lg shadow-md"
-                    />
+                <div class="flex gap-4 mt-10">
+                    <!-- Cột bên trái (ảnh 1) -->
+                    <div class="w-1/2">
+                        <img
+                            src="../image/UPDATE/INOX 1.jpg"
+                            alt="Ảnh inox 1"
+                            class="w-full h-[300px] object-cover rounded-lg shadow-md cursor-pointer hover:opacity-80 transition"
+                            onclick="openModal(this)"
+                        />
+                    </div>
+
+                    <!-- Cột bên phải (ảnh 2) -->
+                    <div class="w-1/2">
+                        <img
+                            src="../image/UPDATE/inox 2.jpg"
+                            alt="Ảnh inox 2"
+                            class="w-full h-[300px] object-cover rounded-lg shadow-md cursor-pointer hover:opacity-80 transition"
+                            onclick="openModal(this)"
+                        />
+                    </div>
                 </div>
             </section>
         </main>
